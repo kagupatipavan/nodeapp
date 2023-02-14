@@ -7,4 +7,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
     
 })
+app.get('/pa',(req,res)=>{
+    res.send('Hello World all');
+})
 app.listen(3000);
