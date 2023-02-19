@@ -10,6 +10,6 @@ app.get('/', (req, res) => {
 app.get('/pa',(req,res)=>{
     res.send('Hello World alll');
 })
-app.listen(3000,'18.179.13.103',()=>{
+app.listen(3000,'192.168.29.246',()=>{
   console.log("working");
 });
