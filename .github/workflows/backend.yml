@@ -1,24 +1,17 @@
-name: Build and Push Docker Image on Pull Request
+name: My GitHub Action
 
 on:
   push:
     branches:
-      - main # Replace with the name of the branch you want to build
+      - main
 
 jobs:
-  build-and-push:
+  build:
     runs-on: self-hosted
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Login to Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: sudo docker.io
-          username: pavankagupati2001
-          password: Pavan@2001
-
-      - name: Build and Push Docker Image
-        run: sudo docker build -t pavannodeapp:v1.1.1
+      - name: Deploy
+        working-directory: ./_work/nodeapp/nodeapp
+        run: sudo docker build -t nodeapp:v1.1.1 .
