@@ -12,6 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Deploy
+      - name: Deploying
         run: cd _work/nodeapp/nodeapp
         run: sudo docker build -t nodeapp:v1.1.1 .
